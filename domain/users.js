@@ -10,9 +10,9 @@ exports.findAllUsers = function(){
 			})
 	})
 }
-exports.findUser = function(){
+exports.findUser = function(userName){
 	return new Promise(function(resolve,reject){
-		usersDB.findUser()
+		usersDB.findUser(userName)
 			.then(users => {
 				resolve(users);
 			})
@@ -21,4 +21,17 @@ exports.findUser = function(){
 				reject(err);
 			})
 	})
+}
+
+exports.updateUser = function(userName,message){
+    return new Promise(function(resolve,reject){
+        usersDB.updateUser(userName,message)
+            .then(users => {
+            resolve(users);
+    		})
+			.catch(err => {
+					console.log(err);
+				reject(err);
+			})
+    })
 }

@@ -1,0 +1,19 @@
+POST /users # Create user
+GET /:handle/tweets # :handle tweets ok
+POST /:handle/tweets # Add tweet ** ok
+GET /:handle/followers # :handle folowers
+GET /:handle/followings # :handle followings
+POST /:handle/followings # Follow someone **
+DELETE /:handle/followings # Stop following someone **
+POST /sessions # Signin user **
+GET /:handle/reading_list # local followings tweets **
+
+
+Nice to have:
+GET /users # list users ok
+GET /tweets # list tweets
+POST /:handle/followers # Add follower (inter SRV)
+DELETE /:handle/followers # Remove follower (inter SRV)
+
+
+** Authenticated:
